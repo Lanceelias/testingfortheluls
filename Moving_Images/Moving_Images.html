@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moving_Images</title>
+<style>
+*{
+	margin:0px;
+	padding:0px;
+}
+#images{
+	width:2520px;
+	height:300px;
+}
+
+img{
+	height:300px;
+	width:500px;
+	
+}
+
+#slider{
+	width:500px;
+	height:300px;
+	background-color:#999;
+	margin-left:400px;
+	margin-top:150px;
+	overflow:hidden;
+}
+
+</style>
+	
+<script type="text/javascript">
+	
+	var c = 0
+	function imgrol()
+	{
+		c = c-1;
+		document.getElementById("images").style.marginLeft = c + "px";
+		setTimeout(imgrol,10);
+	}
+	
+</script>
+</head>
+<body onload="imgrol()">
+<div id="slider">
+	<div id="images">
+		<img src="img/img10.png">
+		<img src="img/img10.png">
+		<img src="img/img10.png">
+		<img src="img/img10.png">
+	</div>
+</div>
+</body>
+</html>
